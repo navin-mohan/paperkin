@@ -1,0 +1,49 @@
+.header-container{
+    display: grid;
+    grid-template-columns: auto 30em auto;
+    grid-template-rows: auto auto 0.5em;
+    border-bottom: 1px #eee solid;
+    box-shadow: 1px 3px 18px -8px;
+}
+
+.header-logo{
+    padding:1em 0;
+}
+
+.header-logo img{
+    height: 4em;
+    position: relative;
+    left: -7px;
+}
+
+.header-logo-text{
+    font-family: 'Comfortaa', cursive;
+    font-size: 2.2575rem;
+}
+
+@media(min-width:967px){
+
+    .header-logo{
+        grid-column-start: 2;
+    }
+
+    .header-logo-text{
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+
+}
+
+@media(max-width:967px){
+    .header-container{
+        grid-template-columns: 100%;        
+    }
+
+    .header-logo-text h1{
+        font-size: 1.475rem;
+    }
+
+    .header-logo img{
+        height: 3.5em;
+    }
+}

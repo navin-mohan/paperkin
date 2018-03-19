@@ -1,0 +1,116 @@
+.posts-container{
+    display: grid;
+    grid-template-columns: auto 40em auto;
+    margin-top:1em;
+}
+
+.posts-item{
+    padding: 2em;
+    padding-top: 1.5em;
+    border: 1px #eee solid;
+    border-radius: 2px;
+    box-shadow: 1px 3px 11px -7px;
+    margin-bottom: 1em;
+    padding-bottom: 1.5em;
+}
+
+.posts-item-container{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
+}
+
+.posts-item-container .title{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: left; 
+    font-family: 'Open Sans', sans-serif;
+}
+
+.posts-item-container .title h2{
+    font-size: 2.0rem;
+}
+
+.posts-item-container .title h2 a,
+.posts-item-container .title h2 a:hover,
+.posts-item-container .title h2 a:visited
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+.posts-item-container .content{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start:2;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
+
+.posts-item-container .author{
+    grid-row-start: 3;
+    text-align: left;
+    color: #8c8e92;
+    font-size: 0.9rem;
+    position: relative;
+    top: 5px;
+}
+
+.posts-item-container .read-more a,
+.posts-item-container .read-more a:hover,
+.posts-item-container .read-more a:visited
+{
+    color: #129db8;
+    transition: 0.2s 
+}
+
+.posts-item-container .author > span > i{
+    color: #a8c7a3;
+}
+
+.posts-item-container .read-more{
+    grid-column-start: 3;
+    text-align: right;
+}
+
+.posts-item-container .published{
+    text-align: right;
+    font-size: 0.7rem;
+    padding-top: 10px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    color: #48bf94;
+}
+
+@media(min-width:967px){
+    .posts-item{
+        grid-column-start: 2;
+    }
+}
+
+@media(max-width:967px){
+    .posts-container{
+        grid-template-columns: 100%;
+        margin-top: 0.3em;
+    }
+
+    .posts-item{
+        padding: 0.5em;
+        margin: 0.5em;
+        padding-top: 0.75em;
+        margin-bottom: 0.25em;
+    }
+
+    .posts-item-container .published{
+        padding-top: 0;
+    }
+
+    .posts-item-container .title h2{
+        font-size: 1.456rem;
+    }
+
+    .posts-item-container .read-more {
+        position: relative;
+        left: -8px;
+    }
+}
