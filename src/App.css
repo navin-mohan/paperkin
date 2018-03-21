@@ -29,6 +29,7 @@
 
 body{
   background-color: #e6e6e661;
-  background-image: url('./img/wormz.png');
+  background-image: url('./img/intersection.png')
+  ;
   background-repeat: repeat; 
 }
